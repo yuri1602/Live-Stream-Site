@@ -278,6 +278,9 @@ body.en .lang-bg {
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     border: 3px solid rgba(255, 255, 255, 0.1);
+    object-fit: cover; /* Ensures image maintains aspect ratio */
+    height: 100%; /* Makes the image fill the container height */
+    max-height: 350px; /* Sets a reasonable max height */
 }
 
 .about-text p {
