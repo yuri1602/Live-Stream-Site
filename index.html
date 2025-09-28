@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Уебсайт за livestream събития (конференции, концерти, корпоративни срещи) от Aleri Group. Професионални услуги за стрийминг на събития.">
+    <title>Професионален Aleri-Stream за събития | Aleri Group</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <style>
+        /* Аварийни стилове - в случай, че външният CSS файл не се зареди */
+        body {
+            background-color: #0f1520;
+            color: #ffffff;
+            font-family: 'Roboto', sans-serif;
+            font-size: 17px;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        a {
+            color: #00a8ff;
+        }
+        .highlight, .aleri-brand {
+            color: #00a8ff;
+            font-weight: 700;
+        }
+        section {
+            padding: 80px 0;
+        }
+        p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        .navbar {
+            background-color: rgba(15, 21, 32, 0.95);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        /* Фикс за проблема с изчезващото съдържание */
+        .fade-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+        /* Допълнителен фикс за езиковите версии */
+        .lang-en, .lang-bg {
+            display: block !important;
+        }
+        body.en .lang-bg {
+            display: none !important;
+        }
+        body:not(.en) .lang-en {
+            display: none !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="#"><span class="highlight">Aleri</span>-Stream</a>
+            </div>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about">За нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#how-it-works">Как работи</a></li>
+                <li><a href="#demo">Демо</a></li>
+                <li><a href="#testimonials">Отзиви</a></li>
+                <li><a href="#pricing">Цени</a></li>
+                <li><a href="#contact">Контакт</a></li>
+                <li class="language-switch">
+                    <a href="#" data-lang="bg" class="active">BG</a> |
+                    <a href="#" data-lang="en">EN</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="lang-bg">Професионален Aleri-Stream за твоето събитие</h1>
+                <h1 class="lang-en">Professional Aleri-Stream for your event</h1>
+                <p class="lang-bg">Превърни всяко събитие в глобално преживяване с нашите висококачествени стрийминг услуги. Част от <span class="aleri-brand">Aleri Group</span>.</p>
+                <p class="lang-en">Turn any event into a global experience with our high-quality streaming services. Part of <span class="aleri-brand">Aleri Group</span>.</p>
+                <a href="#contact" class="btn btn-primary lang-bg">Започни сега</a>
+                <a href="#contact" class="btn btn-primary lang-en">Start now</a>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title lang-bg">За Aleri-Stream</h2>
+            <h2 class="section-title lang-en">About Aleri-Stream</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lang-bg"><strong>Цел:</strong> Професионален уебсайт за livestream събития, включително конференции, концерти и корпоративни срещи. Като част от <span class="aleri-brand">Aleri Group</span>, ние предлагаме цялостни решения за излъчване на живо с висококачествено оборудване и опитен екип.</p>
+                    <p class="lang-en"><strong>Purpose:</strong> Professional website for livestream events including conferences, concerts, and corporate meetings. As part of <span class="aleri-brand">Aleri Group</span>, we provide comprehensive solutions for live broadcasting with high-quality equipment and an experienced team.</p>
+                    <p class="lang-bg">Нашият професионален, корпоративен и модерен подход осигурява безпроблемно изживяване за Вас и Вашите зрители. Ние помагаме да разширите обхвата на Вашето събитие отвъд физическото пространство.</p>
+                    <p class="lang-en">Our professional, corporate, and modern approach ensures a seamless experience for you and your viewers. We help extend the reach of your event beyond physical space.</p>
+                </div>
+                <div class="about-image">
+                    <img src="assets/images/about-image.jpg" alt="Aleri-Stream professional team" class="about-img">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title lang-bg">Нашите услуги</h2>
+            <h2 class="section-title lang-en">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="lang-bg">Конференции и семинари</h3>
+                    <h3 class="lang-en">Conferences and Seminars</h3>
+                    <p class="lang-bg">Професионално излъчване на бизнес събития с интерактивни функции и висока надеждност.</p>
+                    <p class="lang-en">Professional broadcasting of business events with interactive features and high reliability.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3 class="lang-bg">Концерти и фестивали</h3>
+                    <h3 class="lang-en">Concerts and Festivals</h3>
+                    <p class="lang-bg">Висококачествено стрийминг решение за музикални събития с перфектен звук и HD видео.</p>
+                    <p class="lang-en">High-quality streaming solution for music events with perfect sound and HD video.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="lang-bg">Корпоративни събития</h3>
+                    <h3 class="lang-en">Corporate Events</h3>
+                    <p class="lang-bg">Сигурно и професионално излъчване на вътрешнофирмени събития с контрол на достъпа.</p>
+                    <p class="lang-en">Secure and professional broadcasting of internal company events with access control.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="lang-bg">Персонализиран стрийминг</h3>
+                    <h3 class="lang-en">Custom Streaming</h3>
+                    <p class="lang-bg">Индивидуални решения за всеки тип събитие със специални изисквания и функционалности.</p>
+                    <p class="lang-en">Individual solutions for every type of event with special requirements and functionalities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title lang-bg">Как работи</h2>
+            <h2 class="section-title lang-en">How it works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="lang-bg">Резервирай</h3>
+                    <h3 class="lang-en">Book</h3>
+                    <p class="lang-bg">Избери дата и час за твоето събитие и попълни кратка форма с изискванията.</p>
+                    <p class="lang-en">Choose a date and time for your event and fill out a short form with requirements.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3 class="lang-bg">Настрой</h3>
+                    <h3 class="lang-en">Setup</h3>
+                    <p class="lang-bg">Нашият екип ще подготви цялата техника и ще тества свързаността.</p>
+                    <p class="lang-en">Our team will prepare all the equipment and test connectivity.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="lang-bg">Излъчвай</h3>
+                    <h3 class="lang-en">Stream</h3>
+                    <p class="lang-bg">Стартирай излъчването с едно кликване и наблюдавай събитието на живо.</p>
+                    <p class="lang-en">Start broadcasting with one click and watch the event live.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3 class="lang-bg">Споделяй</h3>
+                    <h3 class="lang-en">Share</h3>
+                    <p class="lang-bg">Получи запис на събитието и го сподели в социалните мрежи.</p>
+                    <p class="lang-en">Get a recording of the event and share it on social media.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo" id="demo">
+        <div class="container">
+            <h2 class="section-title lang-bg">Видео демонстрация</h2>
+            <h2 class="section-title lang-en">Video demonstration</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/your-demo-video-id" title="Aleri-Stream Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title lang-bg">Отзиви на клиенти</h2>
+            <h2 class="section-title lang-en">Client Testimonials</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p class="lang-bg">"Изключително професионална услуга! Събитието ни беше излъчено перфектно с кристален звук и HD качество."</p>
+                        <p class="lang-en">"Extremely professional service! Our event was broadcast perfectly with crystal clear sound and HD quality."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/images/client1.jpg" alt="Клиент 1" class="testimonial-avatar">
+                        <div class="author-info">
+                            <h4>Мартин Петров</h4>
+                            <p>Конференция TECH 2025</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p class="lang-bg">"Благодарение на тях успяхме да достигнем до хиляди хора по време на фестивала ни. Определено препоръчвам!"</p>
+                        <p class="lang-en">"Thanks to them, we were able to reach thousands of people during our festival. I definitely recommend!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/images/client2.jpg" alt="Клиент 2" class="testimonial-avatar">
+                        <div class="author-info">
+                            <h4>Ива Димитрова</h4>
+                            <p>Музикален фестивал "Звезди"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="partners">
+                <h3 class="lang-bg">Нашите партньори</h3>
+                <h3 class="lang-en">Our Partners</h3>
+                <div class="partners-logos">
+                    <img src="assets/images/partner1.png" alt="Партньор 1">
+                    <img src="assets/images/partner2.png" alt="Партньор 2">
+                    <img src="assets/images/partner3.png" alt="Партньор 3">
+                    <img src="assets/images/partner4.png" alt="Партньор 4">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title lang-bg">Цени и пакети</h2>
+            <h2 class="section-title lang-en">Prices and Packages</h2>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Basic</h3>
+                        <div class="price">
+                            <span class="currency">лв</span>
+                            <span class="amount">499</span>
+                            <span class="period lang-bg">/събитие</span>
+                            <span class="period lang-en">/event</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li class="lang-bg">До 2 часа излъчване</li>
+                            <li class="lang-en">Up to 2 hours of broadcast</li>
+                            <li class="lang-bg">HD качество</li>
+                            <li class="lang-en">HD quality</li>
+                            <li class="lang-bg">До 100 едновременни зрители</li>
+                            <li class="lang-en">Up to 100 concurrent viewers</li>
+                            <li class="lang-bg">Базово брандиране</li>
+                            <li class="lang-en">Basic branding</li>
+                            <li class="lang-bg">Запис на събитието</li>
+                            <li class="lang-en">Event recording</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-action">
+                        <a href="#contact" class="btn lang-bg">Избери</a>
+                        <a href="#contact" class="btn lang-en">Select</a>
+                    </div>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="pricing-badge lang-bg">Най-популярен</div>
+                    <div class="pricing-badge lang-en">Most popular</div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <div class="price">
+                            <span class="currency">лв</span>
+                            <span class="amount">999</span>
+                            <span class="period lang-bg">/събитие</span>
+                            <span class="period lang-en">/event</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li class="lang-bg">До 6 часа излъчване</li>
+                            <li class="lang-en">Up to 6 hours of broadcast</li>
+                            <li class="lang-bg">Full HD качество</li>
+                            <li class="lang-en">Full HD quality</li>
+                            <li class="lang-bg">До 500 едновременни зрители</li>
+                            <li class="lang-en">Up to 500 concurrent viewers</li>
+                            <li class="lang-bg">Пълно брандиране</li>
+                            <li class="lang-en">Full branding</li>
+                            <li class="lang-bg">Запис и монтаж</li>
+                            <li class="lang-en">Recording and editing</li>
+                            <li class="lang-bg">Модерирани коментари</li>
+                            <li class="lang-en">Moderated comments</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-action">
+                        <a href="#contact" class="btn btn-primary lang-bg">Избери</a>
+                        <a href="#contact" class="btn btn-primary lang-en">Select</a>
+                    </div>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="custom-quote lang-bg">По запитване</span>
+                            <span class="custom-quote lang-en">Custom quote</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li class="lang-bg">Неограничено излъчване</li>
+                            <li class="lang-en">Unlimited broadcast</li>
+                            <li class="lang-bg">4K качество</li>
+                            <li class="lang-en">4K quality</li>
+                            <li class="lang-bg">Неограничени зрители</li>
+                            <li class="lang-en">Unlimited viewers</li>
+                            <li class="lang-bg">Персонализирана платформа</li>
+                            <li class="lang-en">Custom platform</li>
+                            <li class="lang-bg">Многокамерно заснемане</li>
+                            <li class="lang-en">Multi-camera shooting</li>
+                            <li class="lang-bg">Пълна техническа поддръжка</li>
+                            <li class="lang-en">Full technical support</li>
+                            <li class="lang-bg">API интеграция</li>
+                            <li class="lang-en">API integration</li>
+                        </ul>
+                    </div>
+                    <div class="pricing-action">
+                        <a href="#contact" class="btn lang-bg">Запитване</a>
+                        <a href="#contact" class="btn lang-en">Inquiry</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title lang-bg">Свържете се с нас</h2>
+            <h2 class="section-title lang-en">Contact us</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <form id="eventForm">
+                        <div class="form-group">
+                            <label for="name" class="lang-bg">Име</label>
+                            <label for="name" class="lang-en">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="lang-bg">Имейл</label>
+                            <label for="email" class="lang-en">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventType" class="lang-bg">Тип събитие</label>
+                            <label for="eventType" class="lang-en">Event Type</label>
+                            <select id="eventType" name="eventType">
+                                <option value="conference" class="lang-bg">Конференция</option>
+                                <option value="conference" class="lang-en">Conference</option>
+                                <option value="concert" class="lang-bg">Концерт</option>
+                                <option value="concert" class="lang-en">Concert</option>
+                                <option value="corporate" class="lang-bg">Корпоративно събитие</option>
+                                <option value="corporate" class="lang-en">Corporate Event</option>
+                                <option value="other" class="lang-bg">Друго</option>
+                                <option value="other" class="lang-en">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="lang-bg">Съобщение</label>
+                            <label for="message" class="lang-en">Message</label>
+                            <textarea id="message" name="message" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary lang-bg">Изпрати заявка</button>
+                        <button type="submit" class="btn btn-primary lang-en">Send request</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>София, бул. Цариградско шосе 115</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+359 888 123 456</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>contact@aleri-stream.bg</p>
+                    </div>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#"><span class="highlight">Aleri</span>-Stream</a>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="lang-bg">Услуги</h4>
+                        <h4 class="lang-en">Services</h4>
+                        <ul>
+                            <li class="lang-bg"><a href="#">Конференции</a></li>
+                            <li class="lang-en"><a href="#">Conferences</a></li>
+                            <li class="lang-bg"><a href="#">Концерти</a></li>
+                            <li class="lang-en"><a href="#">Concerts</a></li>
+                            <li class="lang-bg"><a href="#">Корпоративни събития</a></li>
+                            <li class="lang-en"><a href="#">Corporate events</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="lang-bg">Компания</h4>
+                        <h4 class="lang-en">Company</h4>
+                        <ul>
+                            <li class="lang-bg"><a href="#">За нас</a></li>
+                            <li class="lang-en"><a href="#">About us</a></li>
+                            <li class="lang-bg"><a href="#">Екип</a></li>
+                            <li class="lang-en"><a href="#">Team</a></li>
+                            <li class="lang-bg"><a href="#">Кариери</a></li>
+                            <li class="lang-en"><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="lang-bg">Поддръжка</h4>
+                        <h4 class="lang-en">Support</h4>
+                        <ul>
+                            <li class="lang-bg"><a href="#">ЧЗВ</a></li>
+                            <li class="lang-en"><a href="#">FAQ</a></li>
+                            <li class="lang-bg"><a href="#">Контакти</a></li>
+                            <li class="lang-en"><a href="#">Contact</a></li>
+                            <li class="lang-bg"><a href="#">Техническа помощ</a></li>
+                            <li class="lang-en"><a href="#">Technical support</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Aleri-Stream Events. <span class="lang-bg">Част от <span class="aleri-brand">Aleri Group</span>. Всички права запазени.</span><span class="lang-en">Part of <span class="aleri-brand">Aleri Group</span>. All rights reserved.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script-fixed.js"></script>
+</body>
+</html>
