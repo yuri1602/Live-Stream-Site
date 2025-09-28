@@ -191,20 +191,72 @@ document.addEventListener('DOMContentLoaded', function() {
                 message: document.getElementById('message').value
             };
             
-            // Here you would normally send the form data to a server
-            // For demonstration, we'll just show an alert
-            console.log('Form submitted:', formData);
+            // Деактивиране на бутона при изпращане
+            const submitButtons = contactForm.querySelectorAll('button[type="submit"]');
+            submitButtons.forEach(button => {
+                button.disabled = true;
+                button.style.opacity = "0.7";
+                
+                // Добавяне на текст за зареждане
+                const lang = document.body.classList.contains('en') ? 'en' : 'bg';
+                const loadingText = lang === 'en' ? 'Sending...' : 'Изпращане...';
+                button.dataset.originalText = button.textContent;
+                button.textContent = loadingText;
+            });
             
-            // Show success message
-            const lang = document.body.classList.contains('en') ? 'en' : 'bg';
-            const successMsg = lang === 'en' 
-                ? 'Thank you! Your request has been submitted. We will contact you shortly.'
-                : 'Благодарим Ви! Заявката е изпратена. Ще се свържем с Вас скоро.';
-            
-            alert(successMsg);
-            
-            // Reset form
-            contactForm.reset();
+            // Изпращане на формата чрез AJAX
+            fetch('sendmail.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Връщане на бутона към нормалното му състояние
+                submitButtons.forEach(button => {
+                    button.disabled = false;
+                    button.style.opacity = "1";
+                    button.textContent = button.dataset.originalText;
+                });
+                
+                // Показване на съобщение
+                const lang = document.body.classList.contains('en') ? 'en' : 'bg';
+                const successMsg = lang === 'en' 
+                    ? 'Thank you! Your request has been submitted. We will contact you shortly.'
+                    : 'Благодарим Ви! Заявката е изпратена. Ще се свържем с Вас скоро.';
+                
+                const errorMsg = lang === 'en'
+                    ? 'Error sending message. Please try again later.'
+                    : 'Грешка при изпращане. Моля, опитайте отново по-късно.';
+                
+                if (data.success) {
+                    alert(successMsg);
+                    // Reset form
+                    contactForm.reset();
+                } else {
+                    alert(errorMsg + (data.message ? '\n\n' + data.message : ''));
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                
+                // Връщане на бутона към нормалното му състояние
+                submitButtons.forEach(button => {
+                    button.disabled = false;
+                    button.style.opacity = "1";
+                    button.textContent = button.dataset.originalText;
+                });
+                
+                // Показване на съобщение за грешка
+                const lang = document.body.classList.contains('en') ? 'en' : 'bg';
+                const errorMsg = lang === 'en'
+                    ? 'Error connecting to server. Please try again later.'
+                    : 'Грешка при връзка със сървъра. Моля, опитайте отново по-късно.';
+                
+                alert(errorMsg);
+            });
         });
     }
 
