@@ -90,9 +90,15 @@ document.addEventListener('DOMContentLoaded', function() {
             if (lang === 'en') {
                 document.body.classList.add('en');
                 console.log('Switched to English');
+                
+                // Update select options for English
+                updateSelectOptionsLanguage('en');
             } else {
                 document.body.classList.remove('en');
                 console.log('Switched to Bulgarian');
+                
+                // Update select options for Bulgarian
+                updateSelectOptionsLanguage('bg');
             }
             
             // Ensure content remains visible after language switch
@@ -102,6 +108,25 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('preferredLanguage', lang);
         });
     });
+    
+    // Function to update select options based on language
+    function updateSelectOptionsLanguage(lang) {
+        // Get all select elements
+        const selects = document.querySelectorAll('select');
+        
+        selects.forEach(select => {
+            const options = select.querySelectorAll('option');
+            options.forEach(option => {
+                // Set the option text based on the current language
+                const bgText = option.querySelector('.lang-bg');
+                const enText = option.querySelector('.lang-en');
+                
+                if (bgText && enText) {
+                    option.textContent = lang === 'en' ? enText.textContent : bgText.textContent;
+                }
+            });
+        });
+    }
 
     // Check for stored language preference
     const storedLang = localStorage.getItem('preferredLanguage');
@@ -114,6 +139,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.classList.remove('active');
             }
         });
+        
+        // Initialize select options for English
+        updateSelectOptionsLanguage('en');
+    } else {
+        // Initialize select options for Bulgarian (default)
+        updateSelectOptionsLanguage('bg');
     }
 
     // Form submission
