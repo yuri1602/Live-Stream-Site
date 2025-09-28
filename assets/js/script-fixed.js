@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const langSwitches = document.querySelectorAll('.language-switch a');
     const contactForm = document.getElementById('eventForm');
     const testimonials = document.querySelectorAll('.testimonial');
+    const video = document.getElementById('demo-video');
     
     // Ensure content visibility by immediately adding these classes
     document.body.classList.add('loaded');
@@ -19,6 +20,36 @@ document.addEventListener('DOMContentLoaded', function() {
         section.classList.add('fade-in');
         section.classList.add('visible');
     });
+    
+    // Видео функционалност - автоматично възпроизвеждане и предотвратяване на пауза
+    if (video) {
+        // Ensure video is muted and playing
+        video.muted = true;
+        video.autoplay = true;
+        video.loop = true;
+        video.playsInline = true;
+        
+        // Start playing the video if not already playing
+        video.play().catch(error => {
+            console.log('Autoplay prevented by browser:', error);
+        });
+        
+        // Prevent pausing by adding event listeners
+        ['pause', 'click', 'contextmenu'].forEach(event => {
+            video.addEventListener(event, (e) => {
+                e.preventDefault();
+                video.play().catch(err => console.log('Play prevented:', err));
+                return false;
+            });
+        });
+        
+        // Make sure video keeps playing even if user switches tabs
+        document.addEventListener('visibilitychange', () => {
+            if (!document.hidden && video.paused) {
+                video.play().catch(err => console.log('Play prevented on visibility change:', err));
+            }
+        });
+    }
     
     // Handle sticky navbar
     window.addEventListener('scroll', () => {

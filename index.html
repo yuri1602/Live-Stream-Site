@@ -240,7 +240,13 @@
             <h2 class="section-title lang-bg">Видео демонстрация</h2>
             <h2 class="section-title lang-en">Video demonstration</h2>
             <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/your-demo-video-id" title="Aleri-Stream Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <video id="demo-video" autoplay muted loop playsinline disablePictureInPicture poster="assets/images/video-poster.jpg" preload="auto">
+                    <source src="assets/videos/demo-video.mp4" type="video/mp4">
+                    <source src="assets/videos/demo-video.webm" type="video/webm">
+                    <p class="lang-bg">Вашият браузър не поддържа HTML5 видео. <a href="assets/videos/demo-video.mp4">Изтеглете видеото</a> за да го гледате.</p>
+                    <p class="lang-en">Your browser doesn't support HTML5 video. <a href="assets/videos/demo-video.mp4">Download the video</a> to watch it.</p>
+                </video>
+                <div class="video-overlay"></div>
             </div>
         </div>
     </section>
@@ -302,7 +308,7 @@
                         <h3>Basic</h3>
                         <div class="price">
                             <span class="currency">лв</span>
-                            <span class="amount">499</span>
+                            <span class="amount">150</span>
                             <span class="period lang-bg">/събитие</span>
                             <span class="period lang-en">/event</span>
                         </div>
@@ -333,7 +339,7 @@
                         <h3>Pro</h3>
                         <div class="price">
                             <span class="currency">лв</span>
-                            <span class="amount">999</span>
+                            <span class="amount">600</span>
                             <span class="period lang-bg">/събитие</span>
                             <span class="period lang-en">/event</span>
                         </div>

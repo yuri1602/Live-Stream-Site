@@ -403,14 +403,49 @@ body.en .lang-bg {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    pointer-events: none; /* Деактивира всякакви събития върху целия контейнер */
 }
 
-.video-container iframe {
+.video-container iframe,
+.video-container video {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    background-color: #000;
+    pointer-events: none; /* Деактивира взаимодействието с видеото */
+}
+
+/* Скриване на контролите */
+.video-container video::-webkit-media-controls,
+.video-container video::-webkit-media-controls-panel,
+.video-container video::-webkit-media-controls-play-button,
+.video-container video::-webkit-media-controls-timeline,
+.video-container video::-webkit-media-controls-volume-slider,
+.video-container video::-webkit-media-controls-mute-button,
+.video-container video::-webkit-media-controls-overlay-play-button,
+.video-container video::-webkit-media-controls-toggle-closed-captions-button {
+    display: none !important;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Видео overlay, който блокира взаимодействия */
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    cursor: default;
+}
+
+/* Стил за постер изображение */
+.video-container video[poster] {
+    object-fit: cover;
 }
 
 /* Testimonials Section */
